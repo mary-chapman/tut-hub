@@ -1,0 +1,30 @@
+Main
+
+-Header
+--Logo
+--Search
+--Login/sign-up
+---User Profile/properties
+
+
+
+-Content
+--NavBar/SideBar
+---TopTags
+--AllPosts
+---Filters
+---PostBlock
+----"post block details (title URL description)"
+----Votes
+----PostContent
+----Tags
+-----Tag
+---Pagination
+--ShowPost
+---"Post details (title URL description categories tags... et al)"
+
+-Form
+--(form to make new post)
+
+-Footer
+--(Info and stuff and donations)
