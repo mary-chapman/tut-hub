@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 3123,
+      "user": "Amir",
+      "categories": ["javascript","front-end","everything else"],
+      "price": 1234123.22,
+      "title": "Learn to code ... all of it",
+      "link": "https://learntocode.com/all-of-it",
+      "description": "this tutorial teaches you to code everything",
+      "date_created": "02/24/1887",
+      "tags": ["#Javascript","#React.js","#node.js", "#React-router", "#eS6", "#"],
+      "likes": 12,
+      "difficulty": 4
+    },
+    {
+      "id": 3122,
+      "user": "Gi0",
+      "category": "SASS",
+      "price": 123431324.33,
+      "title": "Design a cool page",
+      "link": "https://learntocode.com/Just-design",
+      "description": "this tutorial teaches you to code everything",
+      "date_created": "02/24/1887",
+      "tags": ["#everything","#code","#java","#idreamofrainbows"],
+      "likes": 12,
+      "difficulty": 4
+    }
+  ]
+}
+#JS
+#javescript
+#frontendJS
