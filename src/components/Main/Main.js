@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Main.css';
+import Footer from '../Footer/Footer';
 
 class Main extends Component {
   render() {
@@ -36,7 +37,7 @@ class Main extends Component {
             <p className="lead">Amir's line--- don't touch this line --</p>
           </div>
         </div>
-
+        <Footer />
       </div>
     );
   }
