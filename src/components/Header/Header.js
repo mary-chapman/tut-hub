@@ -1,43 +1,22 @@
 import React, { Component } from 'react';
 
+import Search from './Search/Search';
+import Logo from './Logo/Logo';
+import Links from './Links/Links';
+import MobileToggleBtn from './MobileToggleBtn/MobileToggleBtn'
+import LoginSignup from './LoginSignup/LoginSignup';
+
 class Header extends Component {
   render() {
     return (
       <div className="Header">
         <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-          {/*************LOGO + LINKS*************/}
-          <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <a className="navbar-brand" href="#">LOGO</a>
-
+          <Logo />
+          <MobileToggleBtn />
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#">Disabled</a>
-              </li>
-            </ul>
-            {/*************************************/}
-
-            {/*************SEARCH******************/}
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control mr-sm-2" type="text" placeholder="Search" />
-              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-            {/*************LOGIN/SIGNUP***************/}
-            <button className="btn btn-outline-success" type="submit">LogIn</button>
-
-            {/*************USER PROFILE***************/}
-            
-            {/***************************************/}
-
+            <Links />
+            <Search />
+            <LoginSignup />
           </div>
         </nav>
       </div>

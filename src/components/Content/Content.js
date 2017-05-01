@@ -4,7 +4,12 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <h1>this is the main content</h1>
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-3">Tutorial Thingy</h1>
+            <p className="lead">Amir's line--- don't touch this line --</p>
+          </div>
+        </div>
       </div>
     );
   }
