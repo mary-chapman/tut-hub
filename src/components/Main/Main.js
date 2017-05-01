@@ -5,6 +5,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Content from '../Content/Content'
+import UserLogin from '../UserLogin/UserLogin'
+import UserRegister from '../UserRegister/UserRegister';
 import Footer from '../Footer/Footer';
 
 class Main extends Component {
@@ -14,6 +16,8 @@ class Main extends Component {
         <Route path='/' component={Header}/>
         <Switch>
           <Route exact path='/' component={Content}/>
+          <Route path='/login' component={UserLogin} />
+          <Route path='/register' component={UserRegister} />
           <Route path='/footer' component={Footer}/>
         </Switch>
       </div>
