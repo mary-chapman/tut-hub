@@ -11,15 +11,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 
-// ReactDOM.render(
-//   <BrowserRouter>
-//     <Main />
-//   </BrowserRouter>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
 
 /******FOR TESTING**********/
-ReactDOM.render(
-  <NavBar />,
-  document.getElementById('root')
-)
+// ReactDOM.render(
+//   <NavBar />,
+//   document.getElementById('root')
+// )

@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar/NavBar';
+import './Content.css'
 
 class Content extends Component {
   render() {
     return (
-      <div className="Content">
+      <div>
         <NavBar />
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-3">Tutorial Thingy</h1>
-            <p className="lead">Amir's line--- don't touch this line --</p>
-          </div>
+        <div id="page-content-wrapper">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-lg-12">
+                      <div className="jumbotron jumbotron-fluid">
+                        <div className="container">
+                          <h1 className="display-3">Tutorial Thingy</h1>
+                          <p className="lead">Amir's line--- don't touch this line --</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     );
