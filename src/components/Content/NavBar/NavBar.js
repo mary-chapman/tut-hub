@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 import './NavBar.css';
-import $ from "jquery";
+import Categories from './Categories/Categories';
 
 class NavBar extends Component {
+
   render() {
     return (
       <div id="wrapper">
         <div id="sidebar-wrapper">
-          <ul className="sidebar-nav">
-          <li><a href="#">JAVASCRIPT</a></li>
-          <li><a href="#">RUBY</a></li>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JAVA</a></li>
-          <li><a href="#">PHP</a></li>
-          <li><a href="#">PYTHON</a></li>
-          <li><a href="#">C++</a></li>
-          <li><a href="#">C#</a></li>
-          <li><a href="#">C</a></li>
-      </ul>
-  </div>
-
-
-
-</div>
+          <ul className="sidebar-nav"><br />
+            <Categories categoryName="JAVASCRIPT" />
+            <Categories categoryName="RUBY" />
+            <Categories categoryName="JAVA" />
+            <Categories categoryName="PHP" />
+            <Categories categoryName="PYTHON" />
+            <Categories categoryName="CSS" />
+            <Categories categoryName="HTML" />
+            <Categories categoryName="C#" />
+            <Categories categoryName="C++" />
+            <Categories categoryName="C" />
+          </ul>
+        </div>
+      </div>
     );
   }
 }

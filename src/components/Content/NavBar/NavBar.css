@@ -1,4 +1,7 @@
-
+.sub {
+  background-color: #555659;
+  line-height: 20px;
+}
  body {
     overflow-x: hidden;
  }
@@ -50,6 +53,7 @@
 /* Sidebar Styles */
 
 .sidebar-nav {
+    padding-top: 20px;
     position: absolute;
     top: 0;
     width: 250px;
@@ -60,23 +64,19 @@
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
+    line-height: 50px;
     display: block;
     text-decoration: none;
     color: #999999;
 }
-
-.sidebar-nav li a:hover {
+.sidebar-nav li:hover {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li:active,
+.sidebar-nav li:focus {
     text-decoration: none;
 }
 
