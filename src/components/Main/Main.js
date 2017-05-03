@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from './'
 import './Main.css';
-
 import { Switch, Route } from 'react-router-dom';
-
 import Header from '../Header/Header';
 import Content from '../Content/Content'
 import UserLogin from '../UserLogin/UserLogin'
