@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Content.css';
 
 import AllPosts from './AllPosts/AllPosts';
 import NavBar from './NavBar/NavBar';
@@ -6,25 +7,22 @@ import NavBar from './NavBar/NavBar';
 class Content extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        <div id="page-content-wrapper">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-12">
-                      <AllPosts />
-                      {/* <div className="jumbotron jumbotron-fluid">
-                        <div className="container">
-                          <h1 className="display-3">Tutorial Thingy</h1>
-                          <p className="lead">Amir's line--- don't touch this line --</p>
-                        </div>
-                      </div> */}
-                    </div>
-                </div>
+      <div className="row">
+        <div className="col-md-3 col-lg-2">
+          <div className="vertical-nav">
+            <button className="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseVerticalNav" aria-expanded="false" aria-controls="collapseExample">
+              <span className="">Menu</span>
+            </button>
+            <div className="collapse" id="collapseVerticalNav">
+              <NavBar />
             </div>
+          </div>
+        </div>
+        <div className="col-md-9 col-lg-10">
+          <AllPosts />
         </div>
       </div>
-    );
+    )
   }
 }
 

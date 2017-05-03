@@ -1,0 +1,14 @@
+.vertical-nav {
+  background-color: #999;
+  min-height: 50px;
+}
+
+/* Vertical NAV starting at 768px (sm) */
+@media (min-width: 768px) {
+  .vertical-nav {
+    min-height: 100vh;
+  }
+  .vertical-nav .collapse {
+    display: block;
+  }
+}
