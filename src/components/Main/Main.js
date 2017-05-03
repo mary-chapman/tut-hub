@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import NavBar from './'
 import './Main.css';
+
+import { Switch, Route } from 'react-router-dom';
+
+import Header from '../Header/Header';
+import Content from '../Content/Content'
+import UserLogin from '../UserLogin/UserLogin'
+import UserRegister from '../UserRegister/UserRegister';
 import Footer from '../Footer/Footer';
 
 class Main extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
 
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-3">Tutorial Thingy</h1>
-            <p className="lead">Amir's line--- don't touch this line --</p>
-          </div>
-        </div>
-
-        <Footer />
+      <div className="Main">
+        <Route path='/' component={Header}/>
+        <Switch>
+          <Route exact path='/' component={Content}/>
+          <Route path='/login' component={UserLogin} />
+          <Route path='/register' component={UserRegister} />
+          <Route path='/footer' component={Footer}/>
+        </Switch>
 
       </div>
     );
