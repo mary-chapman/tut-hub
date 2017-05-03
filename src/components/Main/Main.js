@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from './'
 import './Main.css';
 
 import { Switch, Route } from 'react-router-dom';
@@ -12,6 +13,7 @@ import Footer from '../Footer/Footer';
 class Main extends Component {
   render() {
     return (
+
       <div className="Main">
         <Route path='/' component={Header}/>
         <Switch>
@@ -20,9 +22,12 @@ class Main extends Component {
           <Route path='/register' component={UserRegister} />
           <Route path='/footer' component={Footer}/>
         </Switch>
+
       </div>
     );
   }
 }
+
+
 
 export default Main;

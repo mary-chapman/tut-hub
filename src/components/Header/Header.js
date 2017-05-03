@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Search from './Search/Search';
 import Logo from './Logo/Logo';
 import Links from './Links/Links';
@@ -25,3 +24,4 @@ class Header extends Component {
 }
 
 export default Header;
+
