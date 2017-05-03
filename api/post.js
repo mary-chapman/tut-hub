@@ -1,4 +1,4 @@
-{
+var posts = {
   "totalResults": 120,
   "totalPages": 12,
   "perPage": 10,
@@ -29,3 +29,4 @@
     "difficulty": 1
   }
 ]}
+module.exports = posts;
