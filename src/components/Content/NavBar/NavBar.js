@@ -6,9 +6,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div id="wrapper">
-        <div id="sidebar-wrapper">
-          <ul className="sidebar-nav"><br />
+      <ul className="nav flex-column">
             <Categories categoryName="JAVASCRIPT" />
             <Categories categoryName="RUBY" />
             <Categories categoryName="JAVA" />
@@ -19,9 +17,7 @@ class NavBar extends Component {
             <Categories categoryName="C#" />
             <Categories categoryName="C++" />
             <Categories categoryName="C" />
-          </ul>
-        </div>
-      </div>
+      </ul>
     );
   }
 }
