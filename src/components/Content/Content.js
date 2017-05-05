@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Row, Col, DropdownButton} from 'react-bootstrap'
 import './Content.css';
 
-
 import AllPosts from './AllPosts/AllPosts';
 import SideBar from './SideBar/SideBar';
 
