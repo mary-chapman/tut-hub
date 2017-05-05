@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './NavBar.css';
+import './SideBar.css';
 import Categories from './Categories/Categories';
 
-class NavBar extends Component {
+class SideBar extends Component {
 
   render() {
     return (
@@ -22,4 +22,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default SideBar;
