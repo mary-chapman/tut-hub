@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Content.css';
 
+
 import AllPosts from './AllPosts/AllPosts';
 import NavBar from './NavBar/NavBar';
 
 class Content extends Component {
+  debugger;
   render() {
     return (
       <div className="row">

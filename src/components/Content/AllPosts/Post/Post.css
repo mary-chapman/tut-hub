@@ -1,0 +1,20 @@
+.postHeader{
+  display: inline-block;
+}
+
+.postHeader title{
+  float: left;
+}
+
+.postHeader.difficulty{
+  display: inline-block;
+  float: right;
+}
+
+.closed.postHeader{
+
+}
+
+.expanded.postHeader{
+
+}

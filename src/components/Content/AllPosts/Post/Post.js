@@ -11,23 +11,25 @@ class Post extends Component {
 
 
   render() {
-    var numStars = parseInt(this.props.data.difficulty);
+    var numStars = parseInt(this.props.data.difficulty, 10);
     var difficulty =[];
     var tags =[];
+    var i;
     //for loop difficulty
-    for (var i = 1; i < 6; i++) {
+    for (i = 1; i < 6; i++) {
       i <= numStars ?
       difficulty.push(<div key={i} className="fill-star">Y</div>)
       :
       difficulty.push(<div key={i} className="empty-star">N</div>)
     }
     //for loop tags
-    for (var i = 0; i < this.props.data.tags.length; i++) {
-      tags.push(<Tag key={i} data={this.props.data.tags[i]} />)
+    for (i = 0; i < this.props.data.tags.length; i++) {
+      tags.push(<Tag key={(i+1)*1000} data={this.props.data.tags[i]} />)
     }
 
 
     return (
+
       <div className="Post" onClick={this.handleClick.bind(this)}>
         {this.props.isTarget?
         <div className="expanded">
@@ -35,11 +37,14 @@ class Post extends Component {
         </div>
         :
         <div className="closed">
-          <div className="postHeader">
-            <title>{this.props.data.title}</title><div className="creator">{this.props.data.user}</div>
+          <div className="postHeader offset-sm-1 col-sm-10">
+            <div className="postTitle">{this.props.data.title}<div className="creator">{this.props.data.user}</div></div>
             <div className="difficulty">{difficulty}</div>
           </div>
-          {tags}
+          <div className="postContent"></div>
+          <div className="postTags">
+            {tags}
+          </div>
         </div>
         }
 
