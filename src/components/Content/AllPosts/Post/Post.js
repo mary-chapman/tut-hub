@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Post.css';
 import Tag from './../../Tag/Tag';
 
 class Post extends Component {
@@ -18,9 +19,9 @@ class Post extends Component {
     //for loop difficulty
     for (i = 1; i < 6; i++) {
       i <= numStars ?
-      difficulty.push(<div key={i} className="fill-star">Y</div>)
+      difficulty.push(<i key={i} className="fa fa-star" aria-hidden="true"></i>)
       :
-      difficulty.push(<div key={i} className="empty-star">N</div>)
+      difficulty.push(<i key={i} className="fa fa-star-o" aria-hidden="true"></i>)
     }
     //for loop tags
     for (i = 0; i < this.props.data.tags.length; i++) {
@@ -30,23 +31,24 @@ class Post extends Component {
 
     return (
 
-      <div className="Post" onClick={this.handleClick.bind(this)}>
-        {this.props.isTarget?
-        <div className="expanded">
-          Expanded post
+      <div className="post" onClick={this.handleClick.bind(this)}>
+        <div className="postHeader">
+          <span className="postTitle">{this.props.data.title}</span>
+          <span className="creator">by {this.props.data.user}</span>
+          <span className="difficulty">{difficulty}</span>
         </div>
-        :
-        <div className="closed">
-          <div className="postHeader offset-sm-1 col-sm-10">
-            <div className="postTitle">{this.props.data.title}<div className="creator">{this.props.data.user}</div></div>
-            <div className="difficulty">{difficulty}</div>
-          </div>
-          <div className="postContent"></div>
+        <div className="postContent">
+        {this.props.isTarget? this.props.data.content:null}
+      </div>
           <div className="postTags">
             {tags}
           </div>
-        </div>
-        }
+
+
+
+
+
+
 
       </div>
     );
