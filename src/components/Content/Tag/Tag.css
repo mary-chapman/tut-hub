@@ -1,0 +1,10 @@
+.Tag{
+  height: 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.Tag:hover{
+  color: gray;
+  opacity: .9;
+}

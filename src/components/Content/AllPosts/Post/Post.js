@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Post.css';
+import {Row, Col} from 'react-bootstrap';
+import Vote from './Vote/Vote';
 import Tag from './../../Tag/Tag';
 
 class Post extends Component {
@@ -30,27 +32,37 @@ class Post extends Component {
 
 
     return (
+      <Row className="post">
+      {/* <div className="post"> */}
+        <Col sm={1} xsHidden className="postVote">
+          <Vote votes={this.props.data.voteTotal}/>
+        </Col>
 
-      <div className="post" onClick={this.handleClick.bind(this)}>
-        <div className="postHeader">
-          <span className="postTitle">{this.props.data.title}</span>
-          <span className="creator">by {this.props.data.user}</span>
-          <span className="difficulty">{difficulty}</span>
-        </div>
-        <div className="postContent">
-        {this.props.isTarget? this.props.data.content:null}
-      </div>
-          <div className="postTags">
-            {tags}
-          </div>
+        <Col sm={11} xs={12} className="postBlock" onClick={this.handleClick.bind(this)}>
+            <Row className="postHeader">
+              <Col sm={9} xs={12}>
+                <span className="postTitle">{this.props.data.title}</span>
+                <span className="creator">by {this.props.data.user}</span>
+              </Col>
+              <Col sm={3} xsHidden>
+                <span className="difficulty">{difficulty}</span>
+              </Col>
+            </Row>
 
+                {this.props.isTarget?
+                  <Row className="postContent">
+                    {this.props.data.content}
+                  </Row>
+                  :null}
 
+            <Row className="postFooter">
+              <Col sm={11} className="postTags">
+                {tags}
+              </Col>
+            </Row>
 
-
-
-
-
-      </div>
+        </Col>
+      </Row>
     );
   }
 }

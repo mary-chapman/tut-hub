@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Header.css';
 import { Link } from 'react-router-dom';
 import {Nav, Navbar} from 'react-bootstrap';
 import Search from './Search/Search';
@@ -8,7 +9,8 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <Navbar inverse collapseOnSelect>
+        <Navbar inverse collapseOnSelect fluid>
+          
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/"><span><img className="logo" src="" alt="TutHub"></img>TutHub</span></Link>
