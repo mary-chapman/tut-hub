@@ -7,6 +7,9 @@ import SideBar from './SideBar/SideBar';
 
 class Content extends Component {
   render() {
+    var postTags=[];
+    this.props.match.params.tagOne ? postTags.push(this.props.match.params.tagOne) : null
+    this.props.match.params.tagTwo ? postTags.push(this.props.match.params.tagTwo) : null
     return (
       <Row>
         <Col xsHidden sm={2}>
@@ -18,21 +21,8 @@ class Content extends Component {
           </DropdownButton>
         </Col>
         <Col sm={10} xs={11}>
-          <AllPosts />
+          <AllPosts postTags={postTags}/>
         </Col>
-        {/* <div className="col-md-3 col-lg-2">
-          <div className="vertical-nav">
-            <button className="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseVerticalNav" aria-expanded="false" aria-controls="collapseExample">
-              <span className="">Menu</span>
-            </button>
-            <div className="collapse" id="collapseVerticalNav">
-              <SideBar />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-9 col-lg-10">
-          <AllPosts />
-        </div> */}
       </Row>
     )
   }

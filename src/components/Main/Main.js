@@ -18,6 +18,8 @@ class Main extends Component {
           <Route path='/login' component={UserLogin} />
           <Route path='/register' component={UserRegister} />
           <Route path='/footer' component={Footer}/>
+          <Route path='/tags/:tagOne/:tagTwo' component={Content} />
+          <Route path='/tags/:tagOne' component={Content} />
         </Switch>
 
       </div>
