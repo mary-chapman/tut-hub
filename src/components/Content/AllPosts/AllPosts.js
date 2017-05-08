@@ -12,6 +12,8 @@ class AllPosts extends Component {
     this.updateTarget = this.updateTarget.bind(this);
   }
   componentDidMount(){
+    // `api/posts/${this.props.postTags.join()}`
+
     // fetch('./../../../../api/post.json')
     // .then(function(response){debugger; return response.json();})
     // .then(function(result){
