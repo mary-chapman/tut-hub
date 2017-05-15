@@ -83,7 +83,8 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
+      "^react-native$": "react-native-web",
+      "^react-bootstrap$": "react-bootstrap"
     }
   },
   "babel": {

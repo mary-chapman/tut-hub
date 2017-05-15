@@ -1,0 +1,50 @@
+[class^="post"]{
+  padding: 0;
+}
+.post{
+  width: 95%;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 4px;
+  /*border: 1px solid red;*/
+}
+
+.postBlock{
+    display: inline-block;
+}
+
+.postHeader{
+  width: 100%;
+  background: red;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.postTitle{
+  padding: 10px;
+  float: left;
+}
+
+.postContent{
+  padding: 15px;
+}
+
+.creator{
+  padding: 10px;
+  float: left;
+}
+
+.difficulty{
+  padding: 10px;
+  float: right;
+}
+
+.postFooter{
+
+}
+
+.postTags{
+  margin-left: 2%;
+  text-align: left;
+}

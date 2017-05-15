@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './Post.css';
+import {Row, Col} from 'react-bootstrap';
+import Vote from './Vote/Vote';
 import Tag from './../../Tag/Tag';
 
 class Post extends Component {
@@ -11,39 +14,55 @@ class Post extends Component {
 
 
   render() {
-    var numStars = parseInt(this.props.data.difficulty);
+    var numStars = parseInt(this.props.data.difficulty, 10);
     var difficulty =[];
     var tags =[];
+    var i;
     //for loop difficulty
-    for (var i = 1; i < 6; i++) {
+    for (i = 1; i < 6; i++) {
       i <= numStars ?
-      difficulty.push(<div key={i} className="fill-star">Y</div>)
+      difficulty.push(<i key={i} className="fa fa-star" aria-hidden="true"></i>)
       :
-      difficulty.push(<div key={i} className="empty-star">N</div>)
+      difficulty.push(<i key={i} className="fa fa-star-o" aria-hidden="true"></i>)
     }
     //for loop tags
-    for (var i = 0; i < this.props.data.tags.length; i++) {
-      tags.push(<Tag key={i} data={this.props.data.tags[i]} />)
+    for (i = 0; i < this.props.data.tags.length; i++) {
+      tags.push(<Tag key={(i+1)*1000} data={this.props.data.tags[i]} />)
     }
 
 
     return (
-      <div className="Post" onClick={this.handleClick.bind(this)}>
-        {this.props.isTarget?
-        <div className="expanded">
-          Expanded post
-        </div>
-        :
-        <div className="closed">
-          <div className="postHeader">
-            <title>{this.props.data.title}</title><div className="creator">{this.props.data.user}</div>
-            <div className="difficulty">{difficulty}</div>
-          </div>
-          {tags}
-        </div>
-        }
+      <Row className="post">
+      {/* <div className="post"> */}
+        <Col sm={1} xsHidden className="postVote">
+          <Vote votes={this.props.data.voteTotal}/>
+        </Col>
 
-      </div>
+        <Col sm={11} xs={12} className="postBlock" onClick={this.handleClick.bind(this)}>
+            <Row className="postHeader">
+              <Col sm={9} xs={12}>
+                <span className="postTitle">{this.props.data.title}</span>
+                <span className="creator">by {this.props.data.user}</span>
+              </Col>
+              <Col sm={3} xsHidden>
+                <span className="difficulty">{difficulty}</span>
+              </Col>
+            </Row>
+
+                {this.props.isTarget?
+                  <Row className="postContent">
+                    {this.props.data.content}
+                  </Row>
+                  :null}
+
+            <Row className="postFooter">
+              <Col sm={11} className="postTags">
+                {tags}
+              </Col>
+            </Row>
+
+        </Col>
+      </Row>
     );
   }
 }

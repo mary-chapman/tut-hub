@@ -14,7 +14,8 @@ var posts = {
     "content": "this tutorial teaches you to code everything in the world about coding. For example, you can learn how to do the HTML stuff with CSS OR you can add some javascript too maybe some jquery. Thats about all you need, but if you decide you want to learn more you can even get into Node.js frameworks and React.js. Please don't forget to thumbs up my tutorial. #TOPTUTORIAL",
     "tags": ["javascript","front-end","everything else"],
     "likes": 12,
-    "difficulty": 4
+    "difficulty": 4,
+    "voteTotal": 23
   },
   {
     "id": 3122,
@@ -26,7 +27,8 @@ var posts = {
     "content": "CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS CSS SCSS SASS",
     "tags": ["#everything","#code","#java","#idreamofrainbows"],
     "likes": 55,
-    "difficulty": 1
+    "difficulty": 1,
+    "voteTotal": 200
   }
 ]}
 module.exports = posts;
