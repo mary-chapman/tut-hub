@@ -7,12 +7,13 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "createdb": "psql -f db/migrations/Create.sql",
-    "migrate": "psql -f db/migrations/Migrations.sql"
+    "createdb": "psql -f db/migrations/Create.sql"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bookshelf": "^0.10.3",
+    "knex": "^0.13.0",
     "pg-promise": "^5.6.7",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
