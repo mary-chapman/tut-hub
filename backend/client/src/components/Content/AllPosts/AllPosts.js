@@ -6,41 +6,28 @@ class AllPosts extends Component {
   constructor(){
     super();
     this.state = {
-      posts: [],
-      users: []
+      posts: []
     }
-    this.renderUsers = this.renderUsers.bind(this);
   }
 
   componentDidMount() {
     //var usersArr = []
-    fetch('/api/users')
+    fetch('/api/posts')
       .then(res => res.json())
-      .then(users => this.setState({ users }));
+      .then(posts => this.setState({ posts }));
   }
 
-  renderUsers() {
-    if (this.state.users.length === 0) {
-      return (
-        <div>loading</div>
-      )
-    } else {
-      this.state.users.map(function(user) {
-        return (
-          <h1>User: {user.username}</h1>
-        )
-      })
-    }
-  }
 
   render() {
-    console.log(this.state.users)
 
     return (
       <div className="AllPosts">
-        <h1>Users:</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
+        // <h1>Users:</h1>
+        {this.state.posts.map(post =>
+          <div key={post.id}>
+            {post.content}
+            <br />
+          </div>
         )}
       </div>
     );
