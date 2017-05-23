@@ -11,9 +11,9 @@ const DB = {
   Tag: Tag
 }
 
-          eval(pry.it)
-Vote.total(1)
-
-DB.Vote.total(1)
+//           eval(pry.it)
+// Vote.total(1)
+//
+// DB.Vote.total(1)
 
 module.exports = DB;
