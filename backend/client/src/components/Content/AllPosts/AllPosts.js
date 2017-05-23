@@ -17,20 +17,21 @@ class AllPosts extends Component {
       .then(posts => this.setState({ posts }));
   }
 
-
   render() {
-
-    return (
-      <div className="AllPosts">
-        // <h1>Users:</h1>
-        {this.state.posts.map(post =>
-          <div key={post.id}>
-            {post.content}
-            <br />
-          </div>
-        )}
-      </div>
-    );
+    if (this.state.posts.length > 0) {
+      return (
+        <div className="AllPosts">
+          this.state.
+          {this.state.posts.map(post =>
+            <div key={post.id}>
+              <Post data={post} />
+            </div>
+          )}
+        </div>
+      );
+    } else {
+      return <div>loading</div>
+    }
   }
 }
 
