@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "concurrently \"PORT=3001 node ./bin/www\" \"npm run client\"",
+    "client": "babel-node start-client.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -15,5 +16,8 @@
     "morgan": "~1.8.1",
     "pg": "^6.2.2",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0"
   }
 }

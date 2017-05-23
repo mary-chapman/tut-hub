@@ -1,4 +1,4 @@
-global.pry = require('pryjs')
+//global.pry = require('pryjs')
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main/Main';
