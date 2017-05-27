@@ -11,7 +11,7 @@ const DB = {
   Tag: Tag
 }
 
-//           eval(pry.it)
+// eval(pry.it)
 // Vote.total(1)
 //
 // DB.Vote.total(1)
