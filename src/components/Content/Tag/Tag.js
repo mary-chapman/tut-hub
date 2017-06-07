@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Tag.css';
+import './Tag.scss';
 import { Label } from 'react-bootstrap';
 
 

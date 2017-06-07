@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col, DropdownButton} from 'react-bootstrap'
-import './Content.css';
+import './Content.scss';
 
 import AllPosts from './AllPosts/AllPosts';
 import SideBar from './SideBar/SideBar';
@@ -8,8 +8,8 @@ import SideBar from './SideBar/SideBar';
 class Content extends Component {
   render() {
     var postTags=[];
-    this.props.match.params.tagOne ? postTags.push(this.props.match.params.tagOne) : null
-    this.props.match.params.tagTwo ? postTags.push(this.props.match.params.tagTwo) : null
+    // this.props.match.params.tagOne ? postTags.push(this.props.match.params.tagOne) : null
+    // this.props.match.params.tagTwo ? postTags.push(this.props.match.params.tagTwo) : null
     return (
       <Row>
         <Col xsHidden sm={2}>

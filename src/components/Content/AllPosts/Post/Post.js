@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Post.css';
+import './Post.scss';
 import {Row, Col} from 'react-bootstrap';
 import Vote from './Vote/Vote';
 import Tag from './../../Tag/Tag';

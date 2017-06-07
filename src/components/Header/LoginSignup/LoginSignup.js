@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './LoginSignup.css';
+import './LoginSignup.scss';
 import { Link } from 'react-router-dom';
 import { MenuItem, Image, NavDropdown} from 'react-bootstrap';
 

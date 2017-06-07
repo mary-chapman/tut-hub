@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './Header.scss';
 import { Link } from 'react-router-dom';
 import {Nav, Navbar} from 'react-bootstrap';
 import Search from './Search/Search';
